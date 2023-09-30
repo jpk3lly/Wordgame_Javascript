@@ -9,12 +9,14 @@ Before you get started, make sure you've signed up at <a href="https://hacktober
 
 ## HOW TO CONTRIBUTE
 
--Star and fork this Repository using the buttons in the top on the right corner of the screen.
--Clone your forked repository to your PC 
--Create a new branch for your contributions 
--Add your files containing your changes, commit and push
--Create a pull request
--Wait for your pull request to merge, (I will get to them as quickly as I can, but depending on volume it may take a little time)
+* Star and fork this Repository using the buttons in the top on the right corner of the screen.
+* Clone your forked repository to your PC 
+* Create a new branch for your contributions 
+* Add your files containing your changes, commit and push
+* Create a pull request
+* Wait for your pull request to merge, (I will get to them as quickly as I can, but depending on volume it may take a little time)
+
+### PULL REQUESTS ONLY COUNT TOWARDS YOUR TOTAL IF THEY'VE BEEN MADE IN THE MONTH OF OCTOBER 
 
 Once you've made your contributions, you can check your progress and see your rewards at <a href="https://hacktoberfest.com/profile/"> 
 
