@@ -1,6 +1,6 @@
 # Welcome to HACKTOBERFEST 2023 
 
-this year I have decided to make a game of Boggle whilst learning HTML, CSS & Javascript. 
+This year I have decided to make a game of Boggle whilst learning HTML, CSS & Javascript. 
 The basic structure of the game is there, but as I'm only learning, there is plenty of room for improvement. 
 
 Before you get started, make sure you've signed up at <a href="https://hacktoberfest.com">
