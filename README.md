@@ -1,4 +1,4 @@
-# Welcome to <img src="https://hacktoberfest.com/_next/static/media/logo-hacktoberfest--horizontal.ebc5fdc8.svg!!!" alt="Hacktoberfest Logo"/> 
+# Welcome to <img src="https://hacktoberfest.com/_next/static/media/logo-hacktoberfest--horizontal.ebc5fdc8.svg" alt="Hacktoberfest Logo"/> 
 
 this year I have decided to make a game of Boggle whilst learning HTML, CSS & Javascript. 
 The basic structure of the game is there, but as I'm only learning, there is plenty of room for improvement. 
