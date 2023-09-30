@@ -24,5 +24,3 @@ Once you've made your contributions, you can check your progress and see your re
 No Worries, There are things such as Wikis that can be contributed to which require no coding knowledge. 
 
 ## THANKS FOR PARTICIPATING AND HAPPY HACKTOBERFEST
-
-ok boss
