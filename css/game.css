@@ -1,0 +1,222 @@
+/**{
+    //background-color: #3C3C3C;
+}*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 12pt;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-content: center;
+
+}
+
+.inner-container {
+    text-align: center;
+}
+
+.table-block {
+    max-width: 350px;
+    border-top: 0.1rem solid;
+    border-right: 0.2rem solid;
+    border-bottom: 0.2rem solid;
+    border-left: 0.05rem solid;
+    border-radius: 12px;
+    background-color: rgba(238, 106, 18, 0.6);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
+.answer-btn {
+
+    font-size: 2rem;
+    background-color: whitesmoke;
+    border-top: 0.1rem solid;
+    border-right: 0.2rem solid;
+    border-bottom: 0.2rem solid;
+    border-left: 0.05rem solid;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.answer-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.submit-btn{
+    font-size: 2rem;
+    border: 0.1rem solid;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    background-color: rgba(127, 255, 212, 0.5);
+    height: 3rem;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.clear-btn, 
+.quit-btn  {
+    font-size: 2rem;
+    border: 0.1rem solid;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    background-color: rgb(247, 95, 90, 0.5);
+    height: 3rem;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.clear-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.answer-btn-selected {
+    font-size: 2rem;
+    border: 0.1rem solid;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    background-color: rgb(185, 233, 185);
+}
+
+.selected-already {
+    background-color: rgb(255, 112, 112);
+}
+
+.current-answer {
+    font-size: 2.5rem;
+}
+
+.submitted-answers {
+    border: 0.1rem solid;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.answers {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.wrong-answer {
+    color: rgb(255, 112, 112);
+}
+
+.right-answer {
+    color: green;
+}
+
+.same-answer {
+    color: orange;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.countdown-timer {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.timer {
+    vertical-align: middle;
+    font-size: 1.5rem;
+    border: 0.1rem solid;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.current-score {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.score-view {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 0.1rem solid;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.input-name {
+    font-size: 1.5rem;
+    border: 0.1rem solid;
+    border-radius: 0.2rem;
+    height: 3rem;
+    vertical-align: middle;
+}

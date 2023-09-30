@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+
+    <title>Boggle</title>
+</head>
+
+<body class="text-center">
+    <nav class="page-header">
+        <div class="current">
+            <h3 id="score-header" class="score-header">Score</h3>
+            <div id="score-view" class="score-view">0</div>
+        </div>
+
+        <div class="countdown-timer">
+            <h3 id="timer-header" class="timer-header">Time Remaining</h3>
+            <div id="timer" class="timer"></div>
+        </div>
+    </nav>
+
+    <h1>BOGGLE</h1>
+
+    <container class="outer-container">
+        <div class="inner-container">
+            <div class="table-block">
+                <table>
+                    <tr class="action-buttons">
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                    </tr>
+                    <tr class="action-buttons">
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                    </tr>
+                    <tr class="action-buttons">
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                    </tr>
+                    <tr class="action-buttons">
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                        <td class="answer-btn"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="action-buttons" class="action-buttons">
+                <button id="submit-btn" class="submit-btn">SUBMIT</button>
+                <button id="clear-btn" class="clear-btn">CLEAR</button>
+            </div>
+            <container>
+
+                <container>
+                    <div>
+                        <div class="card">
+                            <h5 id="answer" class="current-answer"></h5>
+                            <p id="answer-definition" class="answers"></p>
+                        </div>
+                    </div>
+                </container>
+
+                <div class="card">
+                    <h3 class="answers">Submitted Answers</h3>
+                    <div id="accepted-answers" class="accepted-answers"></div>
+                </div>
+            </container>
+            <div id="action-buttons" class="action-buttons">
+                <button id="quit-btn" class="quit-btn">QUIT</button>
+            </div>
+        </div>
+    </container>
+
+</body>
+<script src="javascript/game.js"></script>
+
+</html>

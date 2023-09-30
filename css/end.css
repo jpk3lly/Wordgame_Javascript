@@ -1,0 +1,47 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: Montserrat;
+    font-size: 12pt;
+}
+
+h1 {
+    font-family: Lilita One;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+    font-size: 2rem;
+    border: 0.1rem solid;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    background-color: whitesmoke;
+    height: 3rem;
+    vertical-align: middle;
+    width: 30%
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.input-name{
+    font-size: 2rem;
+    border: 0.1rem solid;
+    border-radius: 0.2rem;
+    height: 3rem;
+    width: 200px;
+    vertical-align: middle;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <title>JPK3LLY</title>
+
+</head>
+
+<body>
+    <div class="game-rules">
+        <h1 id="title" class="display-4">BOGGLE</h1>
+        <h3>Rules</h3>
+        <p>The objective of Boggle is to find as many valid words as possible within the 3 minute time limit. </p>
+
+        <h3>Gameplay</h3>
+        <ul>
+            <li>
+                Words are formed by connecting adjacent letters (horizontally, vertically, or diagonally) in any
+                direction to create a sequence of letters.
+            </li>
+            <li>
+                Each word must be composed of at least three letters.
+            </li>
+            <li>
+                Players can only use a letter square once for each word found. For example, to find the word "apple,"
+                there would need to be 2 letter P squares on the board.
+            </li>
+            <li>
+                Proper nouns, abbreviations, contractions, and hyphenated words are typically not allowed. Only valid
+                English words found in a standard dictionary are accepted.
+            </li>
+        </ul>
+
+        <h3>Scoring</h3>
+        <ul>
+            <li>
+                Unlike the conventional Boggle scoring system, the scoring system employed in this game is based on the
+                letters included in the words you find and is as follows:
+            </li>
+            <li>
+                Letters 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R' are worth 1 point
+            </li>
+            <li>
+                Letters 'D' and 'G' are worth 2 points
+            </li>
+            <li>
+                Letters 'B', 'C', 'M' and 'P' are worth 3 points
+            </li>
+            <li>
+                Letters 'F', 'H', 'V', 'W' and 'Y' are worth 4 points
+            </li>
+            <li>
+                The letter 'K' is worth 5 points
+            </li>
+            <li>
+                Letters 'J' and 'X' are worth 8 points
+            </li>
+            <li>
+                Letters 'Q' and 'Z' are worth 10 points
+            </li>
+        </ul>
+        <div class="navigation-buttons">
+            <button id="new-game" class="btn btn-light btn-lg" href="game.html">PLAY</button>
+            <button id="scoreboard" class="btn btn-light btn-lg" href="scoreboard.html">SCOREBOARD</button>
+            <button id="home" class="btn btn-light btn-lg" href="index.html">HOME</button>
+        </div>
+    </div>
+
+</body>
+<script src="javascript/boggle.js"></script>
+
+</html>
