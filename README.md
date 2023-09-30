@@ -7,7 +7,7 @@ Before you get started, make sure you've signed up at <a href="https://hacktober
 
 
 
-##HOW TO CONTRIBUTE
+## HOW TO CONTRIBUTE
 
 1.Star and fork this Repository using the buttons in the top on the right corner of the screen.
 2.Clone your forked repository to your PC 
@@ -19,9 +19,9 @@ Before you get started, make sure you've signed up at <a href="https://hacktober
 Once you've made your contributions, you can check your progress and see your rewards at <a href="https://hacktoberfest.com/profile/"> 
 
 
-##CAN'T CODE? 
+## CAN'T CODE? 
 
 No Worries, There are things such as Wikis that can be contributed to which require no coding knowledge. 
 
-# THANKS FOR PARTICIPATING AND HAPPY HACKTOBERFEST
+## THANKS FOR PARTICIPATING AND HAPPY HACKTOBERFEST
 
