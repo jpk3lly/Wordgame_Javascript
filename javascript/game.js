@@ -242,8 +242,4 @@ forfeitGameButton();
 countDown();
 submitAnswer();
 
-// TODO - see if we can find out how to only let users select letters that are touching each other
-// TODO - Get the list of selected words to show on the game over screen
-// TODO - sort some cool styling
-// TODO - Finish the other pages off.
 
