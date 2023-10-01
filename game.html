@@ -32,6 +32,11 @@
 
     <container class="outer-container">
         <div class="inner-container">
+            <div id="action-buttons">
+                <button id="submit-btn" class="submit-btn">SUBMIT</button>
+                <button id="clear-btn" class="clear-btn">CLEAR</button>
+                <button id="quit-btn" class="quit-btn">QUIT</button>
+            </div>
             <div class="table-block">
                 <table>
                     <tr class="action-buttons">
@@ -62,11 +67,7 @@
             </div>
 
             <container>
-                <div>
-                    <div>
-                        <p id="answer-definition" class="answers"></p>
-                    </div>
-                </div>
+
                 <div class="card">
                     <h3 class="answers">Submitted Answers</h3>
                     <div id="accepted-answers" class="accepted-answers">
@@ -75,13 +76,12 @@
                             <li class="submitted-answers">${answer}</li> -->
                     </div>
                 </div>
+                <div id="answer-definition">
+                    <p id="answers"></p>
+                </div>
             </container>
         </div>
 
-        <div id="action-buttons" class="action-buttons">
-            <button id="submit-btn" class="submit-btn">SUBMIT</button>
-            <button id="clear-btn" class="clear-btn">CLEAR</button>
-        </div>
 
         <div>
             <div class="card">
@@ -89,10 +89,6 @@
             </div>
         </div>
 
-
-        <div id="action-buttons" class="action-buttons">
-            <button id="quit-btn" class="quit-btn">QUIT</button>
-        </div>
     </container>
 
 </body>
