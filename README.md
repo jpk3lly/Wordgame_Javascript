@@ -3,7 +3,7 @@
 This year I have decided to make a game of Boggle whilst learning HTML, CSS & Javascript. 
 The basic structure of the game is there, but as I'm only learning, there is plenty of room for improvement. 
 
-Before you get started, make sure you've signed up at <a href="https://hacktoberfest.com">
+Before you get started, make sure you've signed up at the <a href="https://hacktoberfest.com">offical Hacktoberfest website.</a>
 
 
 
@@ -18,7 +18,7 @@ Before you get started, make sure you've signed up at <a href="https://hacktober
 
 ### PULL REQUESTS ONLY COUNT TOWARDS YOUR TOTAL IF THEY'VE BEEN MADE IN THE MONTH OF OCTOBER 
 
-Once you've made your contributions, you can check your progress and see your rewards at <a href="https://hacktoberfest.com/profile/"> 
+Once you've made your contributions, you can check your progress and see your rewards <a href="https://hacktoberfest.com/profile/">on your Hacktoberfest Profile</a> 
 
 
 ## CAN'T CODE? 
