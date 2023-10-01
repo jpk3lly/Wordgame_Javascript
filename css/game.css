@@ -22,11 +22,8 @@ h1 {
     flex-direction: column;
     flex-wrap:wrap;
     align-content: center;
-
-}
-
-.inner-container {
     text-align: center;
+
 }
 
 .table-block {
@@ -37,6 +34,15 @@ h1 {
     border-left: 0.05rem solid;
     border-radius: 12px;
     background-color: rgba(238, 106, 18, 0.6);
+}
+
+.inner-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100vh;
+    margin-bottom: 20px;
+    padding: 0.5rem;
 }
 
 .action-buttons {
@@ -98,6 +104,7 @@ h1 {
     font-size: 2rem;
     border: 0.1rem solid;
     margin: 0.5rem;
+    cursor: pointer;
     border-radius: 0.2rem;
     text-decoration: none;
     background-color: rgb(247, 95, 90, 0.5);
