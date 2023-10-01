@@ -15,6 +15,10 @@ Before you get started, make sure you've signed up at the <a href="https://hackt
 * Add your files containing your changes, commit and push
 * Create a pull request
 * Wait for your pull request to merge, (I will get to them as quickly as I can, but depending on volume it may take a little time)
+* Get atleast 4 pull request's merged to earn hacktoberfest' swags
+* Note:- Always make more than 4 pull requests.Let's say you have made only 4 pull requests to different projects,
+but one project is excluded from hackoctoberfest event then your pull request will not be counted and 
+then you have the remaining 3 valid pull requests if these projects are not excluded.
 
 ### PULL REQUESTS ONLY COUNT TOWARDS YOUR TOTAL IF THEY'VE BEEN MADE IN THE MONTH OF OCTOBER 
 
