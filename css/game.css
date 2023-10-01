@@ -86,6 +86,7 @@ h1 {
 }
 
 .submit-btn {
+
     border: 0.1rem solid rgba(127, 255, 212, 0.5);
     margin: 0.5rem;
     border-radius: 0.2rem;
@@ -232,4 +233,28 @@ h1 {
     text-align: center;
     vertical-align: middle;
     justify-content: space-between;
+
+}
+
+.card {
+    background-color: rgb(225, 251, 175);
+    border-radius: 25px;
+}
+
+.submitted-answers {
+
+    justify-content: space-between;
+    border: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+
+
+}
+
+#answer-definition {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+
 }
