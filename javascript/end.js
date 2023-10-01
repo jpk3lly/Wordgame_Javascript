@@ -6,9 +6,12 @@ const boggleHighScores = JSON.parse(localStorage.getItem("boggleHighScores")) ||
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const wordsIdentified = localStorage.getItem('words');
 const totalWordsIdentified = localStorage.getItem('wordCount');
+const acceptedAnswers = document.getElementById('accepted-answers');
 
 currentScore.innerText = mostRecentScore;
 wordsFound.innerText = `You found ${totalWordsIdentified} words in total`;
+
+acceptedAnswers.innerText = wordsIdentified;
 
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
