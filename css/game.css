@@ -20,7 +20,7 @@ h1 {
 .outer-container {
     display: flex;
     flex-direction: column;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-content: center;
     text-align: center;
 
@@ -36,7 +36,7 @@ h1 {
     background-color: rgba(238, 106, 18, 0.6);
 }
 
-.inner-container{
+.inner-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -85,31 +85,29 @@ h1 {
     transition: transform 150ms;
 }
 
-.submit-btn{
-    font-size: 2rem;
-    border: 0.1rem solid;
+.submit-btn {
+    border: 0.1rem solid rgba(127, 255, 212, 0.5);
     margin: 0.5rem;
     border-radius: 0.2rem;
     text-decoration: none;
     background-color: rgba(127, 255, 212, 0.5);
     height: 3rem;
-    width: 50%;
+    /* width: 50%; */
     text-align: center;
     vertical-align: middle;
     overflow: auto;
 }
 
-.clear-btn, 
-.quit-btn  {
-    font-size: 2rem;
-    border: 0.1rem solid;
+.clear-btn,
+.quit-btn {
+    border: 0.1rem solid rgb(247, 95, 90, 0.5);
     margin: 0.5rem;
     cursor: pointer;
     border-radius: 0.2rem;
     text-decoration: none;
     background-color: rgb(247, 95, 90, 0.5);
     height: 3rem;
-    width: 50%;
+    /* width: 50%; */
     text-align: center;
     vertical-align: middle;
     overflow: auto;
@@ -124,7 +122,7 @@ h1 {
 
 .clear-btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.4rem 1.4rem rgb(247, 95, 90, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
@@ -226,4 +224,12 @@ h1 {
     border-radius: 0.2rem;
     height: 3rem;
     vertical-align: middle;
+}
+
+#action-buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: space-between;
 }
