@@ -109,8 +109,9 @@ clearAnswer = () => {
         answerWindow.classList.remove('same-answer');
         });
     selectedWord = '';
+    answerWindow.innerText = '';
     answerWindow.innerText = selectedWord;
-    answerDefinition.innerText = '';
+    //answerDefinition.innerText = '';
 }
 
 /* USE DICTIONARY API TO VALIDATE ANSWERS*/ 
@@ -131,7 +132,7 @@ validateWord = () => {
         } 
         else{
             wordDefinition = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
-            answerDefinition.innerText = `${data[0].meanings[0].definitions[0].definition}`;
+            answerDefinition.innerText = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
             submittedAnswers.push(selectedWord); 
             acceptedAnswers.innerHTML = submittedAnswers.map(answer => {                    
                 return `<li class="submitted-answers">${answer}</li>`
