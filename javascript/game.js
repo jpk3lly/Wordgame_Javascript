@@ -130,6 +130,7 @@ submitAnswer = () => {
     });
 }
 
+submitAnswer();
 
 /* SETTING THE CLEAR ACTION*/
 resetButton = () => {
@@ -240,6 +241,8 @@ countDown = () => {
         timeRemaining--
     }, 1000);
 };
+
+countDown();
 
 /* KEEPING SCORE */
 individualWordScore = () => {
