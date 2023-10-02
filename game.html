@@ -15,12 +15,13 @@
     <title>Boggle</title>
 </head>
 
-<body class="text-center">
+<body class="text-center" style="height: max-content;">
     <nav class="page-header">
         <div class="current">
-            <h3 id="score-header" class="score-header">Score</h3>
+            <h3 id="score-header" class="score-header" style="padding-left: 5px;">Score</h3>
             <div id="score-view" class="score-view">0</div>
         </div>
+        <h1 style="text-align: center;">BOGGLE</h1>
 
         <div class="countdown-timer">
             <h3 id="timer-header" class="timer-header">Time Remaining</h3>
@@ -28,7 +29,11 @@
         </div>
     </nav>
 
-    <h1>BOGGLE</h1>
+    <div>
+        <div class="card" id="card">
+            <h5 id="answer" class="current-answer" style="text-align: center;"></h5>
+        </div>
+    </div>
 
     <container class="outer-container">
         <div class="inner-container">
@@ -82,12 +87,6 @@
             </container>
         </div>
 
-
-        <div>
-            <div class="card">
-                <h5 id="answer" class="current-answer"></h5>
-            </div>
-        </div>
 
     </container>
 
