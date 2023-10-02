@@ -79,4 +79,29 @@ To make changes to the downloaded repository, it is best to use a Code Editor. U
 1. Change to the new-branch name by typing 'git checkout "new-branch-name" '
 
 - terminal messages states 'Switched to a new branch "new-branch-name" (3)
-  ![branch](images/04newbranch2.png)
+  ![branch](images/04newbranch3.png)
+
+1. Make meaningful changes to the file(s) and folders
+
+1. **IMPORTANT:** Save the changes made
+   1. use the 'git add' command with the name of the file
+   2. use the 'git commit' command with a message in quotation marks, to stage the changes locally
+   3. use the 'git push' command to push the changes to the repository stored on GitHub
+      ![changes](images/05makechanges1.png)
+
+### Pull Request
+
+A 'pull request' is the way of asking the owner of the original repository that you have made changes to their project.
+
+If the owner agrees that the changes improves the their project, they will 'merge' the changes you have to their repository.
+
+- go to the origin repository where you 'forked' the project
+- click on the green button 'Compare & pull request'
+  ![pull request](images/06pullrequest1.png)
+
+A new window will appear to 'Open a pull request'
+
+- write a polite respectful message to the owner of the original repository outlining the changes you have made and how this might improve the project
+- click on the green button 'Create pull request'
+- wait for the owner of the project to acknowledge the pull request and respond.
+  ![create pull request](images/06pullrequest2.png)
