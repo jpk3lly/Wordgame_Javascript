@@ -9,6 +9,9 @@ const quitButton = document.getElementById('quit-btn');
 const timer = document.getElementById('timer');
 const score = document.getElementById('score-view');
 const answerDefinition = document.getElementById('answers');
+const quitModal = document.getElementById("quit-modal")
+const quitYes = document.getElementById("quit-yes")
+const quitNo = document.getElementById("quit-no")
 const onePoint = ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R'];
 const twoPoints = ['D', 'G'];
 const threePoints = ['B', 'C', 'M', 'P'];
@@ -280,15 +283,20 @@ saveScores = () => {
 }
 
 /* ACTION ON THE QUIT BUTTON */
-forfeitGameButton = () => {
-    quitButton.addEventListener("click", e => {
-        const response = confirm('Are you sure you want to quit? Your progress will be lost');
-
-        if (response) {
-            window.location.assign('index.html');
-        }
-    });
+const showModal=()=>{
+    quitModal.style.display = 'block'
 }
+const handleQuitYes = ()=>{
+    window.location.href = 'index.html'
+}
+
+const handleQuitNo = () =>{
+    quitModal.style.display = 'none'; 
+}
+quitButton.addEventListener("click", showModal)
+quitYes.addEventListener("click",handleQuitYes )
+quitNo.addEventListener("click",handleQuitNo)
+
 
 forfeitGameButton();
 countDown();

@@ -309,3 +309,22 @@ h1 {
     max-width: 200pt;
     
 }
+
+.quit-yes-no{
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+
+}
+
+#quit-modal{
+    background-color: rgba(238, 106, 18, 0.6);
+    height: 50%;
+    padding: 10px;
+    border-top: 0.1rem solid;
+    border-right: 0.2rem solid;
+    border-bottom: 0.2rem solid;
+    border-left: 0.05rem solid;
+    border-radius: 12px;
+}
