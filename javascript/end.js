@@ -40,7 +40,7 @@ window.location.assign('/');
 
 playAgain = () => {
     playAgainBtn.addEventListener("click", e => { 
-        window.location.assign('game.html');
+        window.location.assign('index.html');
     });
 }
 
