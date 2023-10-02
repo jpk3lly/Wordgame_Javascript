@@ -8,15 +8,18 @@ Before you get started, make sure you've signed up at the <a href="https://hackt
 ## HOW TO CONTRIBUTE
 
 - Star and Fork this repository using the buttons in the top on the right corner of the screen.
-- Clone your forked repository to your computer.
-- Create a new branch for your contributions
-- Add your files containing your changes, commit and push.
+- Clone your forked repository from your github account, to your computer.
+- Create a new branch for your contributions.
+- Add your files containing your changes, commit and push to your branched repo.
 - Create a pull request.
 - Wait for your pull request to merge, (I will get to them as quickly as I can, but depending on volume it may take a little time)
-- Get atleast 4 pull request's merged to earn hacktoberfest' swags
-- Note:- Always make more than 4 pull requests.Let's say you have made only 4 pull requests to different projects,
-  but one project is excluded from hackoctoberfest event then your pull request will not be counted and
-  then you have the remaining 3 valid pull requests if these projects are not excluded.
+- Get at least 4 pull request's merged to earn Hacktoberfest swag.
+- Note:- Always make more than 4 pull requests.
+  - Let's say you have only made 4 pull requests to different projects, but one project is excluded from Hackoctoberfest event, then this pull request will not be counted, therefore only 3 valid pull requests have been successful. Not enough for swag from Hacktoberfest.
+
+## HOW TO: Fork, Clone, Create New Branch, Make Changes, Send Pull Request
+
+Instructions to help you do this are in the [instructions.md](/instructions.md)
 
 ### PULL REQUESTS ONLY COUNT TOWARDS YOUR TOTAL IF THEY'VE BEEN MADE IN THE MONTH OF OCTOBER
 
