@@ -132,7 +132,6 @@ submitAnswer = () => {
 
 submitAnswer();
 
-
 /* SETTING THE CLEAR ACTION*/
 resetButton = () => {
     clearButton.addEventListener("click", e => {
