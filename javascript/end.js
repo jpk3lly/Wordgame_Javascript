@@ -25,6 +25,7 @@ username.addEventListener('keyup', () => {
 
 saveHighScore = (e) => {
     e.preventDefault();
+    
 
     const score = {
     score: mostRecentScore,
@@ -41,8 +42,11 @@ boggleHighScores.sort((a,b) => {
 boggleHighScores.splice(10);
 
 localStorage.setItem('boggleHighScores', JSON.stringify(boggleHighScores));
-window.location.assign('/');
+window.location.assign('scoreboard.html');
 };
+
+saveHighScore();
+
 
 playAgain = () => {
     playAgainBtn.addEventListener("click", e => { 
