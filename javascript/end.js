@@ -12,7 +12,11 @@ currentScore.innerText = mostRecentScore;
 wordsFound.innerText = `You found ${totalWordsIdentified} words in total`;
 
 acceptedAnswers.innerText = wordsIdentified;
-
+/*
+acceptedAnswers.innerHTML = wordsIdentified.map(word => {
+    return `<li class="accepted-answers">${word}</li>`
+}).join("");
+*/
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
 });

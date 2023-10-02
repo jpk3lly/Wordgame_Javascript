@@ -182,7 +182,7 @@ validateWord = () => {
                 answerDefinition.innerHTML = `${ans}`;
 
 
-
+1000
 
                 submittedAnswers.push(selectedWord);
                 acceptedAnswers.innerHTML = submittedAnswers.map(answer => {
