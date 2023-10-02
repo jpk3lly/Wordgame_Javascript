@@ -300,3 +300,12 @@ h1 {
     transform: none;
     background-color: rgb(255, 207, 207);
 }
+
+.answer-rundown{    
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
+    max-width: 200pt;
+    
+}

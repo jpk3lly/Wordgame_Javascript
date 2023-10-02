@@ -16,20 +16,23 @@
 
     <h1 id="score"></h1>
     <div class="submitted-answers">
-        <h3  class="answers">Your Score</h3>
-        <div id="final-score" class="answers"></div>
-        <div id="words-found" class="answers">Words Found</div>
-
         <form action="" class="input-group">
             <input type="text" name="username" id="username" class="input-name" placeholder="Enter Name"></input>
             <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
         </form>
+
+        <h3  class="answers">Your Score</h3>
+        <div id="final-score" class="answers"></div>
+        <div id="words-found" class="answers">Words Found</div>
+
+        <h1 id="answer"></h1>
+        <div class="submitted-answers">
+        <h3 class="answers">Submitted Answers</h3>
+        <ul id="accepted-answers"></ul>
+        </div>
+
     </div>
-    <h1 id="answer"></h1>
-    <div class="submitted-answers">
-    <h3 class="answers">Submitted Answers</h3>
-    <ul id="accepted-answers" class="accepted-Answers"></ul>
-    </div>
+
 
     <container>
     <button id="play-again-btn" class="btn">Play Again</button>
