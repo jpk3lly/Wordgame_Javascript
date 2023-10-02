@@ -1,4 +1,4 @@
-## Here are instructions on how to Fork, Clone, New Branch, Make Changes, Pull Request.
+## Here are instructions on how to: Fork, make New Branch, Clone, Make Changes, Pull Request.
 
 - [Fork](#fork)
 - [New Branch](#new-branch)
@@ -46,7 +46,7 @@ github uses the Tree as a visual analogy of file management, and file changes.
 1. Install Git (Version Control System) on your computer via this link [Git download](https://git-scm.com/download)
 
    - Git is needed to store and track any changes made to the downloaded repository, that is on the computer.
-   - Git is used to 'push' any changes made to the downloaded repository back to github.
+   - Git is used to 'push' any changes made to the files in the downloaded repository on the computer back to github.
 
 1. Open a terminal on your computer:
 
@@ -87,13 +87,13 @@ To make changes to the downloaded repository, it is best to use a Code Editor. U
    1. use the 'git add' command with the name of the file
    2. use the 'git commit' command with a message in quotation marks, to stage the changes locally
    3. use the 'git push' command to push the changes to the repository stored on GitHub
-      ![changes](images/05makechanges1.png)
+      ![changes](images/04newbranch5.png)
 
 ### Pull Request
 
 A 'pull request' is the way of asking the owner of the original repository that you have made changes to their project.
 
-If the owner agrees that the changes improves the their project, they will 'merge' the changes you have to their repository.
+If the owner agrees that the changes improves the their project, they will 'merge' the changes you have made to their repository.
 
 - go to the origin repository where you 'forked' the project
 - click on the green button 'Compare & pull request'
