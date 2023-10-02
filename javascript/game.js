@@ -178,10 +178,10 @@ validateWord = () => {
                 wordDefinition = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
                 ans = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
 
-                // ansDefinition.push(ans);
-                // answerDefinition.innerHTML = ansDefinition.map(defi => {
-                //     return `<li class="definition">${defi}</li>`
-                // }).join("");
+                ansDefinition.push(ans);
+                answerDefinition.innerHTML = ansDefinition.map(defi => {
+                    return `<li class="definition">${defi}</li>`
+                }).join("");
 
                 answerDefinition.innerHTML = `${ans}`;
 
