@@ -4,31 +4,34 @@ body {
     height: 100%;
     overflow: hidden;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    padding: 10px;
     font-family: Montserrat;
     font-size: 12pt;
+    overflow: scroll;
 }
 
 h1 {
-    font-family: Lilita One;
+    font-family: Montserrat;
     font-size: 4rem;
     text-align: center;
 }
 
-.btn {
+.btn{
+    max-width:300px;
     text-align: center;
     font-size: 2rem;
+    color: #000;
     border: 0.1rem solid;
     margin: 0.5rem;
     border-radius: 0.2rem;
     text-decoration: none;
     background-color: whitesmoke;
-    height: 3rem;
+    height:3rem;
+    width: 150px;
+    text-align: center;
     vertical-align: middle;
-    width: 30%
 }
+
 
 .btn:hover {
     cursor: pointer;
@@ -42,7 +45,43 @@ h1 {
     border: 0.1rem solid;
     border-radius: 0.2rem;
     height: 3rem;
-    width: 200px;
+    width: 400px;
     vertical-align: middle;
 }
 
+.answers,
+.final-score{
+    font-size: 1.75rem;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.words-found{
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+.scoreboard-titles{
+    font-size: 1.5rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.answer-rundown{
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+#play-again-btn{
+    width: 250px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-item{
+    flex-grow: 1;
+    flex-basis: 200;
+}
