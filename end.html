@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/game.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/end.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="container">
+
+<body>
     <h1 class="display-1">GAME OVER</h1>
-
-    <h1 id="score"></h1>
-    <div class="submitted-answers">
-        <form action="" class="input-group">
-            <input type="text" name="username" id="username" class="input-name" placeholder="Enter Name"></input>
-            <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
-        </form>
-
-        <h3  class="answers">Your Score</h3>
-        <div id="final-score" class="answers"></div>
-        <div id="words-found" class="answers">Words Found</div>
-
-        <h1 id="answer"></h1>
-        <div class="submitted-answers">
-        <h3 class="answers">Submitted Answers</h3>
-        <ul id="accepted-answers"></ul>
+    <container class="container">
+        <div class="container-item">
+            <h3 class="answers">YOUR SCORE</h3>
+            <div id="final-score" class="final-score"></div>
+            <div id="words-found" class="words-found">Words Found</div>
+            <h1 id="score"></h1>
+            <form action="" class="input-group">
+                <input type="text" name="username" id="username" class="input-name" placeholder="Enter Name"></input>
+                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)"
+                    disabled>Save</button>
+            </form>
         </div>
-
+        <div class="container-item">
+            <h1 id="answer"></h1>
+            <div class="submitted-answers">
+                <h3 class="answers">SUBMITTED ANSWERS</h3>
+                <ul id="accepted-answers"></ul>
+            </div>
+        </div>
+    </container>
     </div>
 
 
-    <container>
-    <button id="play-again-btn" class="btn">Play Again</button>
-    </container>
+
+    <button id="play-again-btn" class="btn">PLAY AGAIN</button>
+
 
 </body>
 <script src="javascript/end.js"></script>
+
 </html>
