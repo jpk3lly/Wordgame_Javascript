@@ -61,6 +61,7 @@ h1{
 }
 
 .btn{
+  padding: auto;
   text-align: center;
   font-family: Montserrat;
   font-size: 2rem;
@@ -71,7 +72,7 @@ h1{
   background-color: whitesmoke;
   height:3rem;
   vertical-align: middle;
-  width: 33%;
+  width: 250px;
 }
 
 .btn:hover{
