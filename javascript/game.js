@@ -54,23 +54,60 @@ updateScore = () => {
 /* READING THE BUTTON PUSHES TO MAKE TO ANSWERS */
 
 userAnswer = () => {
-    letterBlocks.forEach(letterBlock => {
+    letterBlocks.forEach((letterBlock, index) => {
         letterBlock.addEventListener("click", e => {
+            let enabled = []; // enabled buttons while selecting letters
+
+            if(letterBlock.classList.contains('disabled')){
+                return;
+            }
             if (letterBlock.classList.contains('answer-btn-selected')) {
                 letterBlock.classList.add('selected-already')
                 console.log(letterBlock.classList)
                 setTimeout(() => {
                     letterBlock.classList.remove('selected-already');
                 }, 500);
+                return;
             }
             else {
                 const selectedChoice = e.target;
                 let selectedLetter = selectedChoice.innerText;
                 selectedWord = selectedWord + selectedLetter;
+
+                let row = Math.floor(index/4), col = index%4; // current row and col
+
+                for(let k=-1; k<=1; ++k){
+                    for(let l=-1; l<=1; ++l){
+                        let enabledRow = row + k, enabledCol = col + l;
+                        if(row == enabledRow && col == enabledCol)continue;
+                        if(enabledRow < 0 || enabledCol < 0 || enabledRow >= 4 || enabledCol >= 4)continue;
+
+                        let newInd = 4*enabledRow + enabledCol;
+                        if(!enabled.includes(newInd)){
+                            enabled.push(newInd);
+                        }
+                    }
+                }
+
+                // console.log(enabled);
+
                 answerWindow.innerText = selectedWord;
                 letterBlock.classList.remove('answer-btn')
                 letterBlock.classList.add('answer-btn-selected')
             }
+
+            letterBlocks.forEach((button, idx) => {
+                if(!enabled.includes(idx)){
+                    if(!button.classList.contains('disabled') && !button.classList.contains('answer-btn-selected')){
+                        button.classList.add('disabled');
+                        button.classList.remove('answer-btn');
+                    }
+                }
+                else{
+                    button.classList.remove('disabled');
+                    if(!button.classList.contains('answer-btn'))button.classList.add('answer-btn');
+                }
+            })
         });
     });
 }
@@ -84,6 +121,7 @@ submitAnswer = () => {
         letterBlocks.forEach(letterBlock => {
             letterBlock.classList.remove('answer-btn-selected')
             letterBlock.classList.add('answer-btn')
+            letterBlock.classList.remove('disabled')
         });
         validateWord();
     });
@@ -104,6 +142,7 @@ resetButton();
 clearAnswer = () => {
     letterBlocks.forEach(letterBlock => {
         letterBlock.classList.remove('answer-btn-selected');
+        letterBlock.classList.remove('disabled');
         letterBlock.classList.add('answer-btn');
         answerWindow.classList.remove('wrong-answer');
         answerWindow.classList.remove('right-answer');
