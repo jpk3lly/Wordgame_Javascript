@@ -1,8 +1,8 @@
 ## Here are instructions on how to Fork, Clone, New Branch, Make Changes, Pull Request.
 
 - [Fork](#fork)
-- [Clone](#clone)
 - [New Branch](#new-branch)
+- [Clone](#clone)
 - [Make Changes](#make-changes)
 - [Pull Request](#pull-request)
 
@@ -19,6 +19,19 @@
 
 1. A window will open with your github account showing the repository you have just copied. Under the title of the repository, it will state 'forked from' with the name of the project owner, and the name of the repository.
    ![your Fork](images/02forkrepo3.png)
+
+### New Branch
+
+github uses the Tree as a visual analogy of file management, and file changes.
+
+1. Making a 'new branch' means copying all the files and folders from the main repository.
+
+1. In your github account, with the 'forked' (copied) repository, click the 'main' button underneath the repository title.
+   ![new branch](images/04newbranch1.png)
+   Give the new branch a descriptive name
+
+1. **IMPORTANT:** next click on 'Create branch:(name) from main'
+   ![use new branch](images/04newbranch2.png)
 
 ### Clone
 
@@ -45,6 +58,25 @@
    ![folder clone](images/03clonerepo3.png)
    Open the folder that has just been created, the contents of the repository will be shown.
 
-### New Branch
+### Make Changes
 
-github uses the Tree as a visual analogy of file
+To make changes to the downloaded repository, it is best to use a Code Editor. Use your favorite editor. Or if you don't have a code editor, here are some examples:
+
+- [VSCode](https://code.visualstudio.com/)
+- [Bluefish](https://bluefish.openoffice.nl)
+- [Notepad++](https://notpad-plus.org)
+
+1. Using your code editor, open the folder where the repository was copied to.
+
+- Make sure that you are editing the new-branch that was created
+- If your code editor supports an integrated terminal, open the terminal within your editor
+- The terminal shows the current working directory (1)
+
+1. **IMPORTANT:** Check which 'branch' is active by typing 'git branch' (2)
+
+- current branch is 'main'
+
+1. Change to the new-branch name by typing 'git checkout "new-branch-name" '
+
+- terminal messages states 'Switched to a new branch "new-branch-name" (3)
+  ![branch](images/04newbranch2.png)
