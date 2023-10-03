@@ -1,6 +1,4 @@
-/**{
-    //background-color: #3C3C3C;
-}*/
+
 
 html,
 body {
@@ -9,7 +7,19 @@ body {
     margin: 0;
     font-family: Montserrat;
     font-size: 12pt;
+    background-color: antiquewhite;
+    animation: changeBackgroundColor 2s infinite alternate;
+    
 }
+@keyframes changeBackgroundColor {
+    0% {
+      background-color: #363744; /* Initial background color */
+    }
+    100% {
+      background-color: #bab3b3 ; /* Color you want to change to */
+    }
+  }
+  
 
 h1 {
     font-family: Montserrat;
