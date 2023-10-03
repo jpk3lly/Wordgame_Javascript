@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/end.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+<body class=" bg-slate-400">
 
-<body>
-    <h1 class="display-1">GAME OVER</h1>
-    <container class="container">
-        <div class="container-item">
-            <h3 class="answers">YOUR SCORE</h3>
-            <div id="final-score" class="final-score"></div>
-            <div id="words-found" class="words-found">Words Found</div>
-            <h1 id="score"></h1>
-            <form action="" class="input-group">
-                <input type="text" name="username" id="username" class="input-name" placeholder="Enter Name"></input>
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)"
-                    disabled>Save</button>
-            </form>
+    
+    <h1 class=" display-1 text-4xl font-bold mt-16 hover:scale-105 hover:text-yellow-500 hover:-translate-y-2 duration-1000 transition-all">GAME OVER</h1>
+ 
+    <div class="border-2 border-black mt-10 mr-2 ml-2 sm:mr-52 sm:ml-52 md:mr-36 md:ml-36 bg-slate-300 flex flex-wrap flex-col justify-center items-center rounded-3xl">
+    <h1 id="score"></h1>
+
+
+    <form action="" class="input-group w-96 mt-5  sm:w-1/3 md:w-1/3 justify-center items-center flex">
+        <input type="text" name="username" id="username" class="input-name text-gray-900 bg-gradient-to-r transition-all from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-bold rounded-lg text-sm px-3 py-2.5 text-center mr-1 mb-2" placeholder="Enter Name"></input>
+        <button type="submit" class="btn shadow-md text-gray-900 bg-gradient-to-r hover:scale-110 duration-1000 transition-all  from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-bold rounded-lg text-sm px-3 py-2.5 text-center mr-1 mb-3" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
+    </form>
+
+    <div class="submitted-answers">
+        <div class=" justify-center items-center flex">
+        <h3  class="answers">Your Score</h3>
+        <div id="final-score" class="answers"></div>
         </div>
-        <div class="container-item">
-            <h1 id="answer"></h1>
-            <div class="submitted-answers">
-                <h3 class="answers">SUBMITTED ANSWERS</h3>
-                <ul id="accepted-answers"></ul>
-            </div>
-        </div>
-    </container>
+        <div id="words-found" class="answers">Words Found</div>
+    </div >
+ </div>
+    
+    
+    
+    <div class="border-2 border-black mt-4 mr-2 ml-2 sm:mr-52 sm:ml-52 md:mr-36 md:ml-36 bg-slate-300 flex flex-wrap flex-col justify-center items-center rounded-3xl">
+    <h1 id="answer"></h1>
+    <div class="submitted-answers">
+    <h3 class="answers text-2xl font-bold ">Submitted Answers</h3>
+    <div id="accepted-answers" class="accepted-Answers text-center"></div>
     </div>
 
-
-
-    <button id="play-again-btn" class="btn">PLAY AGAIN</button>
-
-
+    <div class=" w-96  sm:w-1/3 md:w-1/3 justify-center items-center flex ">
+    <button type="button" id="play-again-btn"  class="btn text-gray-900 bg-gradient-to-r hover:scale-110 transition-all duration-1000 shadow-md from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-bold rounded-lg text-sm px-3 py-2.5 text-center mr-1 mb-6">Play Again</button>
+    <button id="scoreboard-btn" class="btn text-gray-900 bg-gradient-to-r hover:scale-110 shadow-md duration-700 transition-all from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-bold rounded-lg text-sm px-3 py-2.5 text-center mr-1 mb-6">Score Board</button>
+    </div>
+</div>
 </body>
 <script src="javascript/end.js"></script>
-
 </html>
