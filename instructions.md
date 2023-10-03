@@ -85,7 +85,7 @@ To make changes to the downloaded repository, it is best to use a Code Editor. U
 
 1. **IMPORTANT:** Save the changes made
    1. use the 'git add' command with the name of the file
-   2. use the 'git commit' command with a message in quotation marks, to stage the changes locally
+   2. use the 'git commit -am' command with a message in "quotation marks", to stage the changes locally
    3. use the 'git push' command to push the changes to the repository stored on GitHub
       ![changes](images/04newbranch5.png)
 
