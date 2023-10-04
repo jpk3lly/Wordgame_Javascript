@@ -67,3 +67,16 @@ body,
     background-color: #000;
     color: #fff;
 }
+#topTenScoresList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.top-score-list{
+    text-align: center;
+}
+
+.top-score-list h2{
+    font-size: 3rem;
+
+}
