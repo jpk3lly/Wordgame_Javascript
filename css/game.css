@@ -23,7 +23,7 @@ body {
 
 h1 {
     font-family: Montserrat;
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     text-align: center;
 }
 
@@ -214,32 +214,26 @@ h1 {
 }
 
 .countdown-timer {
-    vertical-align: middle;
     text-align: center;
 }
 
-.timer {
-    vertical-align: middle;
-    font-size: 1.5rem;
-    border: 0.1rem solid;
-    padding: 0.5rem;
-    border-radius: 50%;
-    width: 40px;
-}
-
-.current-score {
+.timer-header,
+.score-header {
     font-weight: bold;
-    vertical-align: middle;
+    font-size: clamp(1rem, 0.9063rem + 0.5vw, 1.5rem);
 }
 
+.timer,
 .score-view {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: center;
-    vertical-align: middle;
+    width: clamp(1.5rem, 3vw, 2.5rem);
+    height: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1rem, 0.9063rem + 0.5vw, 1.5rem);
     border: 0.1rem solid;
     padding: 0.5rem;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-name {
