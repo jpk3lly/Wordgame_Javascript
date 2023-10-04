@@ -1,64 +1,112 @@
-
-html,
-body,
-.top-score-table {
+/* Reset styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+html, body {
+    display:flex;
+    flex:1;  
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    display:flex;
+    flex:1;
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    font-family: Montserrat;
-    font-size: 12pt;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
 }
 
-.btn{
-    max-width:300px;
-    display: flex;
-    flex-direction:column;
-    text-align: center;
-    font-size: 2rem;
-    color: #000;
-    border: 0.1rem solid;
+.top-score-table {
+    display:flex;
+    flex:1;
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.btn {
+    display:flex;
+    flex:1;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #3498db; /* Blue button color */
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
     margin: 0.5rem;
-    border-radius: 0.2rem;
-    text-decoration: none;
-    background-color: whitesmoke;
-    height:3rem;
-    width: 50%;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.btn:hover{
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
+    transition: background-color 0.3s ease;
 }
 
-.high-score{
-    font-size: 1.75rem;
-    color: #000;
-    list-style: none;
-    border: 0.1rem solid;
+.btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.high-score {
+    display:flex;
+    flex:1;
+    font-size: 1.5rem;
+    color: #444;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem 2rem;
     margin: 0.5rem;
-    border-radius: 0.2rem;
-    height:3rem;
-    text-align: center;
-    vertical-align: middle;
-    text-align: center;
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.score-header{
-    font-family: Lilita One;
+.score-header {
+    display:flex;
+    flex:1;
     font-size: 3rem;
     font-weight: bold;
-    text-align: center;
-    vertical-align: middle;
+    color: #444;
+    margin-bottom: 1rem;
 }
 
-.scoreboard-titles{
-    font-size: 1.5rem;
-    text-align: center;
+.scoreboard-titles {
+    display:flex;
+    flex:1;
+    font-size: 1.75rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-score-table {
+        padding: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .high-score {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .score-header {
+        font-size: 2rem;
+    }
+    
+    .scoreboard-titles {
+        font-size: 1.25rem;
+    }
 }

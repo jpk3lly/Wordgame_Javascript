@@ -7,19 +7,19 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-family: Montserrat;
-    font-size: 12pt;
+    font-family: serif;
+    font-size: 21pt;
 }
 
 h1 {
-    font-family: Lilita One;
-    font-size: 4rem;
+    font-family:serif;
+    font-size: 5rem;
     text-align: center;
 }
 
 .btn {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     border: 0.1rem solid;
     margin: 0.5rem;
     border-radius: 0.2rem;
@@ -32,16 +32,33 @@ h1 {
 
 .btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.6rem 1.8rem rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
 .input-name{
-    font-size: 2rem;
+    
+    font-size: 3rem;
     border: 0.1rem solid;
     border-radius: 0.2rem;
     height: 3rem;
     width: 200px;
     vertical-align: middle;
+}
+.input-group{
+    border-radius: 0.2rem;
+}
+.input-group:hover{
+    box-shadow: 0 0.6rem 1.8rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+#username{
+    border-radius: 0.2rem;
+}
+#username:hover{
+    box-shadow: 0 0.6rem 1.8rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }

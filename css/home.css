@@ -1,7 +1,4 @@
-/**{
-    //background-color: #3C3C3C;
-}*/
-
+/* Global Styles */
 html,
 body {
     width: 100%;
@@ -11,91 +8,138 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-family:Montserrat;
-    font-size: 12pt;
+    font-family: serif;
+    font-size: 15pt;
 }
 
-h1{
-  font-family:Montserrat;
-  font-size: 4rem;
-  text-align: center;
-  margin: 0.1em 0;
+h1 {
+    font-family: serif;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0.1em 0;
 }
 
-.nav{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 10px;
-  background-color: #000;
-  height: 40px;
-  vertical-align: middle;
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: #4f0909;
+    height: 40px;
+    vertical-align: middle;
 }
 
-.nav-title{
-  font-size: 1.2rem;
-  color: #fff;
-  text-decoration: none;
-  list-style: none;
-  vertical-align: middle;
+.nav-title {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: middle;
 }
 
-.nav-item{
-  list-style: none;
-  vertical-align: middle;
+.nav-item {
+    list-style: none;
+    vertical-align: middle;
 }
 
-.nav-wording{
-  text-decoration: none;
-  color: whitesmoke;
-  vertical-align: middle;
+.nav-wording {
+    text-decoration: none;
+    color: whitesmoke;
+    vertical-align: middle;
 }
 
-.navigation-buttons{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-content: center;
+.navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
-.btn{
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 2rem;
-  border: 0.1rem solid;
-  margin: 0.5rem;
-  border-radius: 0.2rem;
-  text-decoration: none;
-  background-color: whitesmoke;
-  height:3rem;
-  vertical-align: middle;
-  width: 33%;
+.btn {
+    text-align: center;
+    font-family: serif;
+    font-size: 2rem;
+    border: 0.1rem solid;
+    margin: 0.5rem;
+    /* border-radius: 1.5rem;
+    text-decoration: none;
+    background-color: rgb(97, 53, 53); */
+    /* height: 3rem; */
+    vertical-align: middle;
+    width: 40%;
+    /* display: block; */
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.btn:hover{
-  cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
-  transform: translateY(-0.1rem);
-  transition: transform 150ms;
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }
-
+/* .myid{
+    font-size: 2rem;
+    text-align:center;
+} */
 .boggle-container,
 .calculator-container,
-.game-rules{
-  border: 0.1rem solid;
-  border-radius: 0.5rem;
-  margin: 0.5rem;
-  padding: 1rem;
-  text-align: justify;
-  background-color:gainsboro;
+.game-rules {
+    border: 0.1rem solid;
+    border-radius: 0rem;
+    margin: 0rem;
+    padding: 1.9rem;
+    text-align:justify;
+    background-color: rgb(19, 111, 132);
 }
 
-.display{
-  display: flex;
-  flex-direction:row;
-  text-align: center;
-  vertical-align: middle;
-  justify-content: space-between;
+.display {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: space-between;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Adjust the font size for smaller screens */
+    }
+
+    .btn {
+        width: 100%; /* Make buttons take up full width on smaller screens */
+    }
+
+    .nav {
+        flex-direction: column; /* Change navigation layout to vertical for smaller screens */
+        height: auto; /* Allow the navigation bar to grow vertically as needed */
+    }
+
+    .nav-title {
+        font-size: 1.2rem;
+    }
+}
+#typing-animation{
+    background: rgb(244, 248, 246);
+box-shadow: 0 8px 32px 0 rgba(243, 243, 243, 0.884);
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+ text-shadow: #c2b9c1;
+ color:rgb(153, 152, 154);
+}
+/* Add more media queries and adjust styles as needed for other screen sizes */

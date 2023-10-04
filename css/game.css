@@ -7,12 +7,13 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: Montserrat;
+    font-family:  serif;
     font-size: 12pt;
+    background-color: rgb(57, 58, 49);;
 }
 
 h1 {
-    font-family: Montserrat;
+    font-family: serif;
     font-size: 4rem;
     text-align: center;
 }
@@ -23,10 +24,13 @@ h1 {
     flex-wrap: wrap;
     align-content: center;
     text-align: center;
-
+    background-color: rgb(57, 58, 49);
 }
 
 .table-block {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
     max-width: 350px;
     border-top: 0.1rem solid;
     border-right: 0.2rem solid;
@@ -34,7 +38,7 @@ h1 {
     border-left: 0.05rem solid;
     border-radius: 12px;
     background-color: rgba(238, 106, 18, 0.6);
-    height: fit-content;
+    /* height: fit-content; */
 }
 
 .inner-container {
@@ -44,9 +48,17 @@ h1 {
     width: 100vh;
     margin-bottom: 20px;
     padding: 0.5rem;
+    background-color:rgb(57, 58, 49); ;
 }
 
 .action-buttons {
+    background: rgb(70, 169, 88);
+    box-shadow: 0 8px 32px 0 rgba(78, 172, 148, 0.884);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+     text-shadow: #2d282d;
+     color:rgb(153, 152, 154);
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -116,6 +128,8 @@ h1 {
 }
 
 .submit-btn:hover {
+    display: flex;
+    margin:auto;
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
@@ -123,6 +137,8 @@ h1 {
 }
 
 .clear-btn:hover {
+    display: flex;
+    margin:auto;
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem rgb(247, 95, 90, 0.5);
     transform: translateY(-0.1rem);
@@ -184,23 +200,34 @@ h1 {
 }
 
 .page-header {
-
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content:space-around;
     font-size: 1rem;
     padding: 0.5rem;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
     height: 10rem;
     text-align: center;
-    /* keep position fixed */
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
-    background-color: white;
+    z-index: 0;
+    background-color: rgb(57, 58, 49);
 
-
+}
+.boggle,
+.timer-header,
+.score-header {
+    
+    display: flex;
+    justify-content: space-evenly;
+    background: rgb(244, 248, 246);
+    box-shadow: 0 8px 32px 0 rgba(243, 243, 243, 0.884);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+     text-shadow: #c2b9c1;
+     color:rgb(153, 152, 154);
 }
 
 .countdown-timer {
@@ -209,6 +236,8 @@ h1 {
 }
 
 .timer {
+    display: flex;
+    /* align-self: self-start; */
     vertical-align: middle;
     font-size: 1.5rem;
     border: 0.1rem solid;
