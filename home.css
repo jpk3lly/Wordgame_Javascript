@@ -1,0 +1,146 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family:Montserrat;
+    font-size: 12pt;
+    font-family: 'Carter One', cursive;
+}
+
+h1{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0.1em 0;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: #000000;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.nav-title{
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: middle;
+}
+
+.nav-item{
+  list-style: none;
+  vertical-align: middle;
+}
+
+.nav-wording{
+  text-decoration: none;
+  color: whitesmoke;
+  vertical-align: middle;
+}
+
+.navigation-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.btn{
+  padding: auto;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2rem;
+  border: 0.1rem solid;
+  margin: 0.5rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  background-color: whitesmoke;
+  height:3rem;
+  vertical-align: middle;
+  width: 250px;
+}
+
+.btn:hover{
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.boggle-container,
+.calculator-container,
+.game-rules{
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  text-align: justify;
+  background-color:rgb(77, 125, 124);
+  animation: changeBackgroundColor 2s infinite alternate;
+}
+
+.game-rules{
+  width: 96vw;
+}
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #3c4264; /* Initial background color */
+  }
+  100% {
+    background-color: #5e6c4d ; /* Color you want to change to */
+  }
+}
+
+.display{
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+
+h2{
+  text-align: center;
+  text-decoration: double;
+  text-shadow: #000;
+
+}
+p{
+  text-align: center;
+}
+/* Center the <ul> element and its content */
+ul.pi {
+  text-align: center; /* Center text within the <ul> */
+  margin: 0 auto; /* Center the <ul> itself horizontally */
+  max-width: 800px; /* Adjust the maximum width as needed */
+  padding: 0; /* Remove default padding */
+  list-style: none;
+ 
+}
+
+/* Center each list item within the <ul> */
+/* Center-align the text within the ul and its list items */
+ul.po {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+ul.po li {
+  text-align: center;
+  margin-bottom: 10px; /* Add spacing between list items as needed */
+}
