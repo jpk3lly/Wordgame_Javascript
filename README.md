@@ -1,6 +1,6 @@
-# Boggle in Javascript
+# Word game in Javascript
 
-I have decided to make a game of Boggle whilst learning HTML, CSS & Javascript.
+For Hacktoberfest this year I have decided to make a word game based on Boggle whilst learning HTML, CSS & Javascript.
 The basic structure of the game is there, but as I'm only learning, there is plenty of room for improvement.
 
 ## HOW TO CONTRIBUTE
