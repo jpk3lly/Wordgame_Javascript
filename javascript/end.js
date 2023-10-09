@@ -50,7 +50,7 @@ saveHighScore();
 
 playAgain = () => {
     playAgainBtn.addEventListener("click", e => { 
-        window.location.assign('index.html');
+        window.location.assign('game.html');
     });
 }
 

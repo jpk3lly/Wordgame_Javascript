@@ -5,19 +5,22 @@ body {
     margin: 0;
     font-family: Montserrat;
     font-size: 12pt;
-    background-color: antiquewhite;
     animation: changeBackgroundColor 2s infinite alternate;
-    
+
 }
+/*
 @keyframes changeBackgroundColor {
     0% {
-      background-color: #363744; /* Initial background color */
-    }
+        background-color: #363744;
+        /* Initial background color */
+/*    }
+
     100% {
-      background-color: #bab3b3 ; /* Color you want to change to */
-    }
-  }
-  
+        background-color: #bab3b3;
+        /* Color you want to change to */
+/*    }
+}
+*/
 
 h1 {
     font-family: Montserrat;
@@ -282,11 +285,13 @@ h1 {
     font-size: 1.25rem;
     padding: 0.5rem;
     margin: 0.5rem;
-    border-radius: 0.2rem;
+    border-radius: solid 0.5rem #000;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
 
 }
 
-.disabled{
+.disabled {
     font-size: 2rem;
     border: 0.1rem solid;
     padding: 0.5rem;
@@ -303,16 +308,16 @@ h1 {
     background-color: rgb(255, 207, 207);
 }
 
-.answer-rundown{    
+.answer-rundown {
     color: black;
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     list-style-type: none;
     max-width: 200pt;
-    
+
 }
 
-.quit-yes-no{
+.quit-yes-no {
     background-color: whitesmoke;
     padding: 0.5rem;
     margin: 0.5rem;
@@ -320,7 +325,7 @@ h1 {
 
 }
 
-#quit-modal{
+#quit-modal {
     background-color: rgba(238, 106, 18, 0.6);
     height: 50%;
     padding: 10px;
