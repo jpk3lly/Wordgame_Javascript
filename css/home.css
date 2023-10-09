@@ -87,17 +87,18 @@ h1{
   margin: 0.5rem;
   padding: 1rem;
   text-align: justify;
-  background-color:rgb(77, 125, 124);
+  background-color:#fff;
   animation: changeBackgroundColor 2s infinite alternate;
 }
+/*
 @keyframes changeBackgroundColor {
   0% {
     background-color: #3c4264; /* Initial background color */
-  }
+  /*}
   100% {
     background-color: #5e6c4d ; /* Color you want to change to */
-  }
-}
+  /*}
+}*/
 
 .display{
   display: flex;
