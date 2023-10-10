@@ -24,8 +24,7 @@
             <h1 id="score"></h1>
             <form action="" class="input-group">
                 <input type="text" name="username" id="username" class="input-name" placeholder="Enter Name"></input>
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)"
-                    disabled>Save</button>
+                <button type="submit" class="btn" id="saveScoreBtn" disabled>Save</button>
             </form>
         </div>
         <div class="container-item">
@@ -44,7 +43,8 @@
 
 
 </body>
-<script src="javascript/end.js"></script>
+<script src="javascript/end.js" type="module"></script>
+<script src="javascript/firebaseConfig.js" type="module"></script>
 <script>
     // Add an event listener to the "PLAY AGAIN" button
     document.getElementById("play-again-btn").addEventListener("click", function () {

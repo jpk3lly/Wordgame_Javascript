@@ -34,7 +34,7 @@ let ansDefinition = [];
 /* CREATING THE NEW GAME BOARD */
 
 // function to generate a random letter
-generateRandomLetters = () => {
+const generateRandomLetters = () => {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let charLength = letters.length;
     let randomLetter = Math.floor(Math.random() * charLength);
@@ -49,14 +49,14 @@ letterBlocks.forEach(letterBlock => {
 })
 
 //set initial score on screen to 0
-updateScore = () => {
+const updateScore = () => {
     score.innerText = totalScore;
 }
 
 
 /* READING THE BUTTON PUSHES TO MAKE TO ANSWERS */
 
-userAnswer = () => {
+const userAnswer = () => {
     letterBlocks.forEach((letterBlock, index) => {
         letterBlock.addEventListener("click", e => {
             let enabled = []; // enabled buttons while selecting letters
@@ -118,7 +118,7 @@ userAnswer = () => {
 userAnswer();
 
 /* SETTING THE SUBMIT ACTION TO SAVE THE WORD AND THEN LET THE USER FIND ANOTHER WORD*/
-submitAnswer = () => {
+function submitAnswer () {
 
     submitButton.addEventListener("click", e => {
         letterBlocks.forEach(letterBlock => {
@@ -133,7 +133,7 @@ submitAnswer = () => {
 submitAnswer();
 
 /* SETTING THE CLEAR ACTION*/
-resetButton = () => {
+const resetButton = () => {
     clearButton.addEventListener("click", e => {
         console.log(e);
         clearAnswer();
@@ -143,7 +143,7 @@ resetButton = () => {
 resetButton();
 
 
-clearAnswer = () => {
+function clearAnswer() {
     letterBlocks.forEach(letterBlock => {
         letterBlock.classList.remove('answer-btn-selected');
         letterBlock.classList.remove('disabled');
@@ -161,7 +161,7 @@ clearAnswer = () => {
 /* USE DICTIONARY API TO VALIDATE ANSWERS*/
 
 
-validateWord = () => {
+const validateWord = () => {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${selectedWord}`)
         .then((response) => response.json())
         .then((data) => {
@@ -176,7 +176,7 @@ validateWord = () => {
             }
             else {
                 wordDefinition = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
-                ans = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
+                let ans = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
 
                 ansDefinition.push(ans);
                 answerDefinition.innerHTML = ansDefinition.map(defi => {
@@ -202,7 +202,7 @@ validateWord = () => {
         });
 }
 
-notAWord = () => {
+function notAWord() {
     answerWindow.classList.add('wrong-answer')
     answerWindow.innerText = 'Not A Word!!';
     setTimeout(() => {
@@ -210,7 +210,7 @@ notAWord = () => {
     }, 200);
 }
 
-notLongEnough = () => {
+function notLongEnough () {
     answerWindow.classList.add('wrong-answer')
     answerWindow.innerText = '3 Letters or More!!';
     setTimeout(() => {
@@ -218,7 +218,7 @@ notLongEnough = () => {
     }, 200);
 }
 
-alreadyUsedWord = () => {
+function alreadyUsedWord () {
     answerWindow.classList.add('same-answer')
     answerWindow.innerText = 'Had that one already!!';
     setTimeout(() => {
@@ -228,7 +228,7 @@ alreadyUsedWord = () => {
 
 /* GAME TIMER */
 
-countDown = () => {
+function countDown () {
     let countdownTimer = setInterval(function () {
         if (timeRemaining <= 0) {
             saveScores();
@@ -242,10 +242,9 @@ countDown = () => {
     }, 1000);
 };
 
-countDown();
 
 /* KEEPING SCORE */
-individualWordScore = () => {
+function individualWordScore () {
     for (var i = 0; i < selectedWord.length; i++) {
         if (twoPoints.includes(selectedWord.charAt(i))) {
             totalScore = totalScore + 2;
@@ -279,10 +278,11 @@ individualWordScore = () => {
 }
 
 /* SAVING SCORE TO LOCAL STORAGE FOR SCOREBOARD */
-saveScores = () => {
-    localStorage.setItem('mostRecentScore', totalScore, 'wordCount', submittedAnswers.length);
-    localStorage.setItem('words', submittedAnswers);
+function saveScores() {
+    localStorage.setItem('mostRecentScore', totalScore);
     localStorage.setItem('wordCount', submittedAnswers.length);
+    localStorage.setItem('words', JSON.stringify(submittedAnswers));
+
 }
 
 /* ACTION ON THE QUIT BUTTON */
@@ -301,7 +301,7 @@ quitYes.addEventListener("click",handleQuitYes )
 quitNo.addEventListener("click",handleQuitNo)
 
 
-forfeitGameButton();
+// forfeitGameButton();
 countDown();
 submitAnswer();
 
