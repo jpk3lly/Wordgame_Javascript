@@ -1,31 +1,43 @@
+import { db } from "./firebaseConfig.js"
+import { ref, query, orderByChild, limitToLast, onValue } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+
+
 const boggleHighScoresList = document.getElementById('boggleHighScoresList');
-const boggleHighScores = JSON.parse(localStorage.getItem('boggleHighScores')) || [];
+const boggleHighScores = [];
+const limit = 10; // top 10 users will be displayed
 
-boggleHighScoresList.innerHTML = 
-boggleHighScores.map(score => {
-    return `<tr class="high-score">
-                <td class="individual-score">${score.name}</td>
-                <td class="individual-score">${score.wordsFound}</td>
-                <td class="individual-score">${score.score}</td>
-            </tr>`
-}).join("");
+boggleHighScoresList.innerHTML = "<p>LOADING....</p>"
 
-// update the top 10 scores list in the HTML
-function updateTopTenScores() {
-    const topTenScoresList = document.getElementById('topTenScoresList');
-    const boggleHighScores = JSON.parse(localStorage.getItem('boggleHighScores')) || [];
+const fetchScores = async () => {
+    const dbRef = query(ref(db, 'allScores'), orderByChild('score'), limitToLast(limit));
+    await onValue(dbRef, (snapshot) => {
+        snapshot.forEach((childSnapshot) => {
+            const data = childSnapshot.val();
+            boggleHighScores.push(data);
+            // console.log(data);
+          });
 
-    topTenScoresList.innerHTML = ''; // Clear the existing list
+        //   console.log(boggleHighScores);
+        boggleHighScores.reverse();
 
-    for (let i = 0; i < Math.min(boggleHighScores.length, 10); i++) {
-        const score = boggleHighScores[i];
-        const listItem = document.createElement('li');
-        listItem.textContent = `${score.name} - Words Found: ${score.wordsFound}, Score: ${score.score}`;
-        topTenScoresList.appendChild(listItem);
-    }
+        boggleHighScoresList.innerHTML = 
+        boggleHighScores.map(score => {
+            return `<tr class="high-score">
+                        <td class="individual-score">${score.name}</td>
+                        <td class="individual-score">${score.wordsFound}</td>
+                        <td class="individual-score">${score.score}</td>
+                    </tr>`
+        }).join("");
+
+    })
+
+
 }
 
-updateTopTenScores();
+fetchScores();
+
+
+
 
 
 
