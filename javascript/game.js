@@ -22,6 +22,7 @@ const tenPoints = ['Q', 'Z'];
 
 
 let selectedWord = '';
+let selectedIndexes = [];
 let submittedAnswers = [];
 let timeRemaining = 180;
 let wordDefinition = [];
@@ -34,7 +35,7 @@ let ansDefinition = [];
 /* CREATING THE NEW GAME BOARD */
 
 // function to generate a random letter
-const generateRandomLetters = () => {
+generateRandomLetters = () => {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let charLength = letters.length;
     let randomLetter = Math.floor(Math.random() * charLength);
@@ -49,14 +50,14 @@ letterBlocks.forEach(letterBlock => {
 })
 
 //set initial score on screen to 0
-const updateScore = () => {
+updateScore = () => {
     score.innerText = totalScore;
 }
 
 
 /* READING THE BUTTON PUSHES TO MAKE TO ANSWERS */
 
-const userAnswer = () => {
+userAnswer = () => {
     letterBlocks.forEach((letterBlock, index) => {
         letterBlock.addEventListener("click", e => {
             let enabled = []; // enabled buttons while selecting letters
@@ -65,42 +66,53 @@ const userAnswer = () => {
                 return;
             }
             if (letterBlock.classList.contains('answer-btn-selected')) {
-                letterBlock.classList.add('selected-already')
-                console.log(letterBlock.classList)
-                setTimeout(() => {
-                    letterBlock.classList.remove('selected-already');
-                }, 500);
-                return;
+                // deselect if selected letter is the last one in current word
+                if (letterBlock.innerText == selectedWord.charAt(selectedWord.length - 1)) {
+                    selectedWord = selectedWord.slice(0,-1);
+                    selectedIndexes.pop();
+                    letterBlock.classList.remove('answer-btn-selected');
+                    letterBlock.classList.add('answer-btn');
+                }
+                else {
+                    letterBlock.classList.add('selected-already')
+                    console.log(letterBlock.classList)
+                    setTimeout(() => {
+                        letterBlock.classList.remove('selected-already');
+                    }, 500);
+                    return;
+                }
             }
             else {
                 const selectedChoice = e.target;
                 let selectedLetter = selectedChoice.innerText;
                 selectedWord = selectedWord + selectedLetter;
-
-                let row = Math.floor(index/4), col = index%4; // current row and col
-
-                for(let k=-1; k<=1; ++k){
-                    for(let l=-1; l<=1; ++l){
-                        let enabledRow = row + k, enabledCol = col + l;
-                        if(row == enabledRow && col == enabledCol)continue;
-                        if(enabledRow < 0 || enabledCol < 0 || enabledRow >= 4 || enabledCol >= 4)continue;
-
-                        let newInd = 4*enabledRow + enabledCol;
-                        if(!enabled.includes(newInd)){
-                            enabled.push(newInd);
-                        }
-                    }
-                }
+                selectedIndexes.push(index);
 
                 // console.log(enabled);
 
-                answerWindow.innerText = selectedWord;
                 letterBlock.classList.remove('answer-btn')
                 letterBlock.classList.add('answer-btn-selected')
             }
 
+            answerWindow.innerText = selectedWord;
+
+            let idx = selectedIndexes[selectedIndexes.length - 1];
+            let row = Math.floor(idx/4), col = idx%4; // current row and col
+            for(let k=-1; k<=1; ++k){
+                for(let l=-1; l<=1; ++l){
+                    let enabledRow = row + k, enabledCol = col + l;
+                    if(row == enabledRow && col == enabledCol)continue;
+                    if(enabledRow < 0 || enabledCol < 0 || enabledRow >= 4 || enabledCol >= 4)continue;
+
+                    let newInd = 4*enabledRow + enabledCol;
+                    if(!enabled.includes(newInd)){
+                        enabled.push(newInd);
+                    }
+                }
+            }
+
             letterBlocks.forEach((button, idx) => {
-                if(!enabled.includes(idx)){
+                if(selectedIndexes.length > 0 && !enabled.includes(idx)){
                     if(!button.classList.contains('disabled') && !button.classList.contains('answer-btn-selected')){
                         button.classList.add('disabled');
                         button.classList.remove('answer-btn');
@@ -118,7 +130,7 @@ const userAnswer = () => {
 userAnswer();
 
 /* SETTING THE SUBMIT ACTION TO SAVE THE WORD AND THEN LET THE USER FIND ANOTHER WORD*/
-function submitAnswer () {
+submitAnswer = () => {
 
     submitButton.addEventListener("click", e => {
         letterBlocks.forEach(letterBlock => {
@@ -133,7 +145,7 @@ function submitAnswer () {
 submitAnswer();
 
 /* SETTING THE CLEAR ACTION*/
-const resetButton = () => {
+resetButton = () => {
     clearButton.addEventListener("click", e => {
         console.log(e);
         clearAnswer();
@@ -143,7 +155,7 @@ const resetButton = () => {
 resetButton();
 
 
-function clearAnswer() {
+clearAnswer = () => {
     letterBlocks.forEach(letterBlock => {
         letterBlock.classList.remove('answer-btn-selected');
         letterBlock.classList.remove('disabled');
@@ -161,7 +173,7 @@ function clearAnswer() {
 /* USE DICTIONARY API TO VALIDATE ANSWERS*/
 
 
-const validateWord = () => {
+validateWord = () => {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${selectedWord}`)
         .then((response) => response.json())
         .then((data) => {
@@ -176,7 +188,7 @@ const validateWord = () => {
             }
             else {
                 wordDefinition = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
-                let ans = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
+                ans = `${data[0].word} - ${data[0].meanings[0].definitions[0].definition}`;
 
                 ansDefinition.push(ans);
                 answerDefinition.innerHTML = ansDefinition.map(defi => {
@@ -202,7 +214,7 @@ const validateWord = () => {
         });
 }
 
-function notAWord() {
+notAWord = () => {
     answerWindow.classList.add('wrong-answer')
     answerWindow.innerText = 'Not A Word!!';
     setTimeout(() => {
@@ -210,7 +222,7 @@ function notAWord() {
     }, 200);
 }
 
-function notLongEnough () {
+notLongEnough = () => {
     answerWindow.classList.add('wrong-answer')
     answerWindow.innerText = '3 Letters or More!!';
     setTimeout(() => {
@@ -218,7 +230,7 @@ function notLongEnough () {
     }, 200);
 }
 
-function alreadyUsedWord () {
+alreadyUsedWord = () => {
     answerWindow.classList.add('same-answer')
     answerWindow.innerText = 'Had that one already!!';
     setTimeout(() => {
@@ -228,7 +240,7 @@ function alreadyUsedWord () {
 
 /* GAME TIMER */
 
-function countDown () {
+countDown = () => {
     let countdownTimer = setInterval(function () {
         if (timeRemaining <= 0) {
             saveScores();
@@ -242,9 +254,10 @@ function countDown () {
     }, 1000);
 };
 
+countDown();
 
 /* KEEPING SCORE */
-function individualWordScore () {
+individualWordScore = () => {
     for (var i = 0; i < selectedWord.length; i++) {
         if (twoPoints.includes(selectedWord.charAt(i))) {
             totalScore = totalScore + 2;
@@ -278,11 +291,10 @@ function individualWordScore () {
 }
 
 /* SAVING SCORE TO LOCAL STORAGE FOR SCOREBOARD */
-function saveScores() {
-    localStorage.setItem('mostRecentScore', totalScore);
+saveScores = () => {
+    localStorage.setItem('mostRecentScore', totalScore, 'wordCount', submittedAnswers.length);
+    localStorage.setItem('words', submittedAnswers);
     localStorage.setItem('wordCount', submittedAnswers.length);
-    localStorage.setItem('words', JSON.stringify(submittedAnswers));
-
 }
 
 /* ACTION ON THE QUIT BUTTON */
@@ -301,7 +313,7 @@ quitYes.addEventListener("click",handleQuitYes )
 quitNo.addEventListener("click",handleQuitNo)
 
 
-// forfeitGameButton();
+forfeitGameButton();
 countDown();
 submitAnswer();
 
