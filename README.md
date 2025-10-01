@@ -1,6 +1,6 @@
 # Word game in Javascript
 
-For Hacktoberfest this year I have decided to make a word game based on Boggle whilst learning HTML, CSS & Javascript.
+Once again accepting comits for Hacktoberfest this year. I have decided to make a word game based on Boggle whilst learning HTML, CSS & Javascript.
 The basic structure of the game is there, but as I'm only learning, there is plenty of room for improvement.
 
 ## HOW TO CONTRIBUTE
